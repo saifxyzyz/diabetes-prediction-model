@@ -26,3 +26,24 @@ def plot_histograms(dataframe, feature_list):
         plt.xlabel(label)
         plt.legend()
         plt.show()
+
+# For tensorflow
+
+def plot_accuracy(history):
+    plt.plot(history.history['accuracy'], label='accuracy')
+    plt.plot(history.history['val_accuracy'], label='val_accuracy')
+    plt.xlabel("Epoch")
+    plt.ylabel("Accuracy")
+    plt.legend()
+    plt.grid(True)
+    plt.show()
+
+
+def plot_loss(history):
+    plt.plot(history.history['loss'], label='loss')
+    plt.plot(history.history['val_loss'], label='val_loss')
+    plt.xlabel("Epoch")
+    plt.ylabel("Binary Cross entropy")
+    plt.legend()
+    plt.grid(True)
+    plt.show()
